@@ -1,0 +1,210 @@
+
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values( 1,'s79ddsds' , 01142542,'samy ',' fathy' ,' fdg@gmail','elharm ');
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values(2 ,'79gfhfh' ,0125425 ,'ibrahim ',' gamal' ,' hff@gmail',' cairo');
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values( 3, '65jfre',045345 ,'seif ','mona ' ,'55446@gmail',' elharm');
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values(4 ,'645rtyr' , 045242,'hesham ','gigy ' ,' 4564@gmail',' giza');
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values(5 ,'w54ewre' ,0487878 ,' nabil','gana ' ,' 9877@yahoo',' ataba');
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values(6 , '45ty6',01545878 ,'youssef ','nahla ' ,' 245@yahoo',' elharm');
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values( 7,'54fgh' , 08852,'gamal ','sally ' ,' 78797@yahoo',' Alex');
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values( 8, '46fg', 09454587,' karim',' simsim' ,' 243@yahoo','sadat ');
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values( 9,'3eer5' , 045775,' adel','koko ' ,' jhk@yahoo',' albhoos');
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values( 10,'jkh' , 045775,' adel','koko ' ,' jhkk@yahoo',' albhoos');
+
+
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(1,1,'so good','Mohammed','01-APR-2018');
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(2,2,'well','ibrahim','01-jan-2019');
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(3,3,'we should help us','fathy','01-jan-2008');
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(4,4,'so try that','Mohammed','01-dec-2006');
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(5,5,'contact me','ramy','01-jan-2019');
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(6,6,'please help me','nadia','01-dec-2018');
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(7,7,'we support ','rana','01-jan-2009');
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(8,8,'can you ?','hessam','01-dec-2020');
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(9,9,'bad','seif','01-jan-2005');
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(10,10,'playing footboll','gana','01-jan-2004');
+
+
+insert into admin(admin_id, years_of_experience)values(1,6);
+insert into admin(admin_id, years_of_experience)values(2,8);
+insert into admin(admin_id, years_of_experience)values(3,7);
+insert into admin(admin_id, years_of_experience)values(5,0);
+insert into admin(admin_id, years_of_experience)values(4,4);
+insert into admin(admin_id, years_of_experience)values(8,10);
+insert into admin(admin_id, years_of_experience)values(6,9);
+insert into admin(admin_id, years_of_experience)values(7,16);
+insert into admin(admin_id, years_of_experience)values(9,2);
+insert into admin(admin_id, years_of_experience)values(10,15);
+
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values ( 1,1 ,' shampoo',1 );
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values ( 2, 2,' jel ',2 );
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values ( 3,3 ,'  coca',3 );
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values ( 4, 4,' programming',4 );
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values ( 10,5 ,' animals save', 5);
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values (6 , 6,' galgci', 6);
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values ( 9,7 ,' jercy ', 7);
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values (8 ,8 ,'  try reading',8 );
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values ( 7,9 ,' help any one', 9);
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values (5 , 10,'  folwers for every one',10 );
+
+insert into author (author_id, place, rent)values(1 ,'El Haram ', 264);
+insert into author (author_id, place, rent)values( 2,'AIN SHAMS ',8725 );
+insert into author (author_id, place, rent)values( 3,'6_october ',6487 );
+insert into author (author_id, place, rent)values( 4,'sadat ', 878);
+insert into author (author_id, place, rent)values( 6,' cairo',211 );
+insert into author (author_id, place, rent)values( 9,' elbhoos', 57);
+insert into author (author_id, place, rent)values( 7,'giza ',678 );
+insert into author (author_id, place, rent)values(8,'sharm ', 782);
+insert into author (author_id, place, rent)values(5 ,' ALEX', 579);
+insert into author (author_id, place, rent)values(10 ,' giza', 789);
+ 
+ 
+ 
+ insert into belongs (comment_id, news_id, user_id) values ( 1,1 ,1 );
+insert into belongs (comment_id, news_id, user_id) values ( 2, 2,2 );
+insert into belongs (comment_id, news_id, user_id) values ( 3, 3, 3);
+insert into belongs (comment_id, news_id, user_id) values (4 , 4, 4);
+insert into belongs (comment_id, news_id, user_id) values ( 5,5 ,5 );
+insert into belongs (comment_id, news_id, user_id) values ( 6, 6, 6);
+insert into belongs (comment_id, news_id, user_id) values ( 7, 7, 7);
+insert into belongs (comment_id, news_id, user_id) values ( 8,8 ,8 );
+insert into belongs (comment_id, news_id, user_id) values ( 9, 9, 9);
+insert into belongs (comment_id, news_id, user_id) values ( 10, 10, 10);
+
+
+
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values(1 ,1 ,'salah ', '01- jan-2012' ,1 ,'sports ');
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values( 2, 2,'liverbool ', '03-dec -2011' ,2 ,'sports ');
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values( 3,3 ,'accidant ', '05-jan -2013' ,3 ,'criminal ');
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values(5 ,5 ,' killing', '04-feb -2015 ', 5,' criminal');
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values( 4, 4,'prison ', '20-jan -2015 ', 4,' criminal');
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values( 6,6 ,'learning ',' 22-feb -2016' ,6 ,'study ');
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values( 7,7 ,' intern', '28-jan -2016' , 7,' study');
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values( 8,8 ,' yallkora', '06-dec -2019' , 8,' sports');
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values( 9, 9,' ahly','18-dec-2020 ', 9,' sports');
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values(10 , 10,' zamalk','04-dec-2021' ,10 ,' sports');
+
+ 
+ 
+ insert into news_cg (cg_id, cg_name, cg_description)values( 1,'ahly',' sport');
+insert into news_cg (cg_id, cg_name, cg_description)values( 2,'prison ','criminal ');
+insert into news_cg (cg_id, cg_name, cg_description)values( 3,'intern ','study ');
+insert into news_cg (cg_id, cg_name, cg_description)values( 5,' killing',' criminal');
+insert into news_cg (cg_id, cg_name, cg_description)values( 8,' acident',' criminal');
+insert into news_cg (cg_id, cg_name, cg_description)values( 4,'liverpool ','sport ');
+insert into news_cg (cg_id, cg_name, cg_description)values( 6,' yallcora',' sport');
+insert into news_cg (cg_id, cg_name, cg_description)values( 7,' learning',' study');
+insert into news_cg (cg_id, cg_name, cg_description)values( 8,' killing',' help');
+insert into news_cg (cg_id, cg_name, cg_description)values( 9,' zamalk',' sport');
+insert into news_cg (cg_id, cg_name, cg_description)values( 10,' learning',' study');
+
+ 
+insert into revision (admin_id, news_id)values( 1, 1);
+insert into revision (admin_id, news_id)values(2 ,2 );
+insert into revision (admin_id, news_id)values( 3,3 );
+insert into revision (admin_id, news_id)values(4 , 4);
+insert into revision (admin_id, news_id)values( 5, 5);
+insert into revision (admin_id, news_id)values( 6, 6);
+insert into revision (admin_id, news_id)values( 7, 7);
+insert into revision (admin_id, news_id)values( 8,8 );
+insert into revision (admin_id, news_id)values( 9, 9);
+insert into revision (admin_id, news_id)values( 10, 10);
+
+
+
+insert into subscription (cg_id, user_id)values ( 1,1 );
+insert into subscription (cg_id, user_id)values ( 2, 2);
+insert into subscription (cg_id, user_id)values (3 , 3);
+insert into subscription (cg_id, user_id)values ( 4,4 );
+insert into subscription (cg_id, user_id)values ( 5,5 );
+insert into subscription (cg_id, user_id)values ( 6, 6);
+insert into subscription (cg_id, user_id)values ( 7, 7);
+insert into subscription (cg_id, user_id)values ( 8, 8);
+insert into subscription (cg_id, user_id)values ( 9, 9);
+insert into subscription (cg_id, user_id)values ( 10, 10);
+
+
+
+insert into user_port(user_id, hour_spent) values(1 ,1 ) ;
+insert into user_port(user_id, hour_spent) values(2 , 2) ;
+insert into user_port(user_id, hour_spent) values( 3, 3) ;
+insert into user_port(user_id, hour_spent) values( 4, 4) ;
+insert into user_port(user_id, hour_spent) values( 5, 5) ;
+insert into user_port(user_id, hour_spent) values( 6,6 ) ;
+insert into user_port(user_id, hour_spent) values( 7, 7) ;
+insert into user_port(user_id, hour_spent) values( 8, 8) ;
+insert into user_port(user_id, hour_spent) values( 9, 9) ;
+insert into user_port(user_id, hour_spent) values( 10, 10) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+insert into person (person_id, person_password, phone_no, last_name, first_name, e_mail, address)values( 15,'vie' , 046575,' gamal','abdelnaser ' ,' @yahoo',' giza');
+commit;
+
+
+insert into admin(admin_id, years_of_experience)values(15,15);
+commit;
+
+
+insert into comments (comment_id, user_id,  content, commentter, date_of_comment) values(15,15,'playing fifa','rana','01-jan-2009');
+commit;
+
+
+insert into advertisement (ad_id, admin_id, content_of_ad, news_id) values (15 , 15,'try again',15 );
+commit;
+
+
+
+insert into author (author_id, place, rent)values(15 ,' giza', 444);
+commit;
+
+
+insert into belongs (comment_id, news_id, user_id) values ( 15, 15, 15);
+commit;
+
+
+
+insert into news (author_id, cg_id, content, date_of_news, news_id, title)values(15 , 15,' zamalk','04-jan-2021' ,15 ,' sports');
+commit;
+
+
+
+
+insert into news_cg (cg_id, cg_name, cg_description)values( 15,' learning',' study');
+commit;
+
+
+
+insert into revision (admin_id, news_id)values( 15, 15);
+commit;
+
+
+
+insert into subscription (cg_id, user_id)values ( 15, 15);
+commit;
+
+
+
+insert into user_port(user_id, hour_spent) values( 15, 15) ;
+commit;
+
+
+
+
+
+
+
+
+
+
+

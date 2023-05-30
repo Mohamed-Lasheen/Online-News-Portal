@@ -1,0 +1,174 @@
+CREATE TABLE User_port(
+    User_ID NUMBER(8),
+    Hour_spent  NUMBER(8) CHECK ( Hour_spent  > 0) NOT NULL,
+    CONSTRAINT User_id_pk PRIMARY KEY(User_ID)
+); 
+
+CREATE TABLE Belongs(
+    News_ID NUMBER(8) NOT NULL,
+    User_ID NUMBER(8) NOT NULL,
+    Comment_ID NUMBER(8) NOT NULL,
+    CONSTRAINT Belong_pk PRIMARY KEY(News_ID, User_ID, Comment_ID)
+);
+
+
+
+CREATE TABLE Comments(
+    Comment_ID  NUMBER(8) ,
+    USER_ID NUMBER(8) NOT NULL ,
+    
+    Content     VARCHAR2(60) ,
+    Commentter VARCHAR2(60) NOT NULL,
+    date_Of_Comment Date NOT NULL ,   
+    CONSTRAINT Comment_PK PRIMARY KEY(Comment_ID , USER_ID)
+);
+
+
+CREATE TABLE News(
+    News_ID NUMBER(8),
+    Title VARCHAR2(25) NOT NULL,
+    Content        VARCHAR2(60) NOT NULL,
+    date_Of_News Date NOT NULL , 
+    CONSTRAINT NEWS_id_pk PRIMARY KEY(News_ID),
+    CG_ID NUMBER(8) NOT NULL ,
+    Author_ID NUMBER(8) NOT NULL 
+);
+
+CREATE table Person
+(Person_ID NUMBER(8),
+E_mail VARCHAR2(60) NOT NULL,
+Person_Password VARCHAR2(60) NOT NULL,
+First_Name VARCHAR2(60) NOT NULL,
+Last_Name VARCHAR2(60) NOT NULL,
+Phone_no NUMBER(11),
+Address VARCHAR2(60),
+CONSTRAINT Person_ID_pk PRIMARY KEY(Person_ID)
+);
+
+CREATE table News_CG 
+(CG_ID NUMBER(8)  ,
+CG_Name varchar2(60) NOT NULL,
+CG_Description varchar2(60)  ,
+CONSTRAINT News_CG_pk PRIMARY KEY(CG_ID)
+);
+
+CREATE table Subscription 
+(CG_ID NUMBER(8),
+ User_ID NUMBER(8),
+ constraint Subscription_id_pk primary key (CG_ID, User_ID) 
+ );
+
+
+create table Author
+(Author_ID NUMBER(8) CONSTRAINT Author_pk PRIMARY KEY,
+Place varchar2(60),
+Rent NUMBER(10));
+
+
+create TABLE Admin
+(Admin_ID NUMBER(8) CONSTRAINT Admin_pk PRIMARY KEY,
+Years_Of_Experience NUMBER(2) CONSTRAINT Admin_not_null NOT NULL );
+
+
+create table Revision
+(Admin_ID NUMBER(8),
+News_ID NUMBER(8),
+constraint revision_pk primary key(Admin_ID, News_ID)
+);
+
+CREATE TABLE Advertisement
+(Ad_ID NUMBER(8) CONSTRAINT Advertisment_pirmary_key PRIMARY KEY ,
+Content_of_Ad varchar2(60) CONSTRAINT Advertisment_not_null not null ,
+News_ID NUMBER(8), 
+Admin_ID NUMBER(8)
+);
+
+
+ 
+ALTER TABLE Belongs
+ADD FOREIGN KEY (News_ID)  
+REFERENCES   News  (News_ID)  on delete cascade ;
+
+
+ALTER TABLE Belongs
+ADD FOREIGN KEY(User_ID)  
+REFERENCES User_port(User_ID) on delete cascade;
+
+
+
+
+
+ALTER TABLE Belongs
+ADD FOREIGN KEY(Comment_ID, User_ID)  
+REFERENCES Comments(Comment_ID, User_ID) on delete cascade;
+
+ALTER TABLE Author
+ADD FOREIGN KEY(Author_ID)  
+REFERENCES Person(Person_ID) on delete cascade;
+
+ALTER TABLE user_port
+ADD FOREIGN KEY(User_ID)  
+REFERENCES Person(Person_ID) on delete cascade;
+
+
+ALTER TABLE News
+ADD FOREIGN KEY(Author_ID)  
+REFERENCES Author(Author_ID) on delete cascade;
+
+ALTER TABLE News
+ADD FOREIGN KEY(CG_ID)  
+REFERENCES NEWS_CG(CG_ID) on delete set null;
+
+ALTER TABLE Admin
+ADD FOREIGN KEY(Admin_ID)  
+REFERENCES Person(Person_ID) on delete cascade;
+
+ALTER TABLE Revision
+ADD FOREIGN KEY(Admin_ID)  
+REFERENCES Admin(Admin_ID) on delete cascade;
+
+
+
+ALTER TABLE Revision
+ADD FOREIGN KEY(News_ID)  
+REFERENCES News(News_ID) on delete cascade;
+
+
+ALTER TABLE Subscription 
+ADD FOREIGN KEY(User_ID)  
+REFERENCES user_port(User_ID) on delete cascade;
+
+ALTER TABLE Subscription 
+ADD FOREIGN KEY(CG_ID)  
+REFERENCES News_CG(CG_ID) on delete cascade;
+
+
+
+ALTER TABLE Comments
+ADD FOREIGN KEY(User_ID)  
+REFERENCES user_port(User_ID) on delete cascade;
+
+
+ALTER TABLE Advertisement
+ADD FOREIGN KEY(News_ID)  
+REFERENCES News(News_ID) on delete cascade;
+
+
+
+ALTER TABLE Advertisement
+ADD FOREIGN KEY(Admin_ID)  
+REFERENCES Admin(Admin_ID) on delete cascade;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
